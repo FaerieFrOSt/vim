@@ -82,7 +82,7 @@ Plug 'airblade/vim-gitgutter'
 "vim-indent-guides : display visual guides for indentation
 Plug 'nathanaelkane/vim-indent-guides'
 let g:indent_guides_enable_on_vim_startup = 1 "start on vim
-let g:indent_guides_auto_colors = 0 "disable auto color finder
+let g:indent_guides_auto_colors = 1 "disable auto color finder
 let g:indent_guides_guide_size = 1 "size of the guide
 "end vim-indent-guides
 
@@ -126,3 +126,6 @@ set nolist
 set shell=zsh
 
 let mapleader = ","
+
+"remove the search highlight
+nnoremap <silent> <C-l> :nohl<CR><C-l>
