@@ -70,6 +70,10 @@ Plug 'cohama/lexima.vim'
 Plug 'airblade/vim-gitgutter'
 "end vim-gitgutter
 
+"vim-tintin : Tintin++ color syntax
+Plug 'LokiChaos/vim-tintin'
+"end vim-tintin
+
 "tagbar : browse the tags of the current file and get an overview of its structure
 "Plug 'majutsushi/tagbar'
 "nmap <F8> :TagbarToggle<CR>
