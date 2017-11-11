@@ -10,13 +10,13 @@ Plug 'tpope/vim-sensible'
 "<c-y> to create new file and parent directories
 "<c-z> to mark/unmark files and <c-o> to open them
 Plug 'ctrlpvim/ctrlp.vim'
-source ~/.config/nvim/config/ctrlp_config.vim
+source ~/.vim/config/ctrlp_config.vim
 "end ctrlp
 
 "nerdtree : visual tree explorer
 "<c-d> to switch between nerdtree and window
 Plug 'scrooloose/nerdtree'
-source ~/.config/nvim/config/nerdtree_config.vim
+source ~/.vim/config/nerdtree_config.vim
 "end nerdtree
 
 "nerdtree-git : show git status flags in nerdtree
@@ -25,17 +25,17 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 
 "airline : lean and mean status/tabline
 Plug 'vim-airline/vim-airline'
-source ~/.config/nvim/config/vim-airline_config.vim
+source ~/.vim/config/vim-airline_config.vim
 "end airline
 
 "vim-fugitive : git wrapper for vim
 Plug 'tpope/vim-fugitive'
-source ~/.config/nvim/config/vim-fugitive_config.vim
+source ~/.vim/config/vim-fugitive_config.vim
 "end vim-fugitive
 
 "syntastic : syntax checking plugin
 Plug 'scrooloose/syntastic'
-source ~/.config/nvim/config/syntastic_config.vim
+source ~/.vim/config/syntastic_config.vim
 "end syntastic
 
 "surround : delete, change and add surroundings (", ', etc) in pairs
@@ -44,17 +44,17 @@ source ~/.config/nvim/config/syntastic_config.vim
 
 "NERD Commenter : comment helper functions
 Plug 'scrooloose/nerdcommenter'
-source ~/.config/nvim/config/nerdcommenter_config.vim
+source ~/.vim/config/nerdcommenter_config.vim
 "end NERD Commenter
 
 "vim-easytags : automated tag generation and syntax highlighting
 Plug 'xolox/vim-easytags'
-source ~/.config/nvim/config/vim-easytags_config.vim
+source ~/.vim/config/vim-easytags_config.vim
 "end vim-easytags
 
 "numbers : switch between absolute and relative numbers displayed
 Plug 'myusuf3/numbers.vim'
-source ~/.config/nvim/config/numbers_config.vim
+source ~/.vim/config/numbers_config.vim
 "end numbers
 
 "undotree : history tree visualizer and manipulator
@@ -141,8 +141,6 @@ set nolist
 set shell=zsh
 
 let mapleader = ","
-
-let &makeprg = "cd `/home/l3nn0x/.config/nvim/findMakefile.sh` && make"
 
 "remove the search highlight
 "nnoremap <silent> <C-l> :nohl<CR><C-l>
