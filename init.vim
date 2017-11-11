@@ -2,7 +2,6 @@ call plug#begin()
 
 "sensible options for vim
 Plug 'tpope/vim-sensible'
-
 "ctrlp : full path fuzzy file, buffer, mru, tag, ... finder for vim
 "launch with <c-p>
 "<f5> to refresh file cache
@@ -40,7 +39,7 @@ source ~/.config/nvim/config/syntastic_config.vim
 "end syntastic
 
 "surround : delete, change and add surroundings (", ', etc) in pairs
-Plug 'tpope/vim-surround'
+"Plug 'tpope/vim-surround'
 "end surround
 
 "NERD Commenter : comment helper functions
@@ -63,7 +62,7 @@ Plug 'mbbill/undotree'
 "end undotree
 
 "lexima : automatically close ", ', (, etc plus bonus
-Plug 'cohama/lexima.vim'
+"Plug 'cohama/lexima.vim'
 "end lexima
 
 "vim-gitgutter : show a git diff in the sign columns
@@ -73,6 +72,14 @@ Plug 'airblade/vim-gitgutter'
 "vim-tintin : Tintin++ color syntax
 Plug 'LokiChaos/vim-tintin'
 "end vim-tintin
+
+"vim-fish : fish comfiguration for vim
+Plug 'dag/vim-fish'
+"end vim-fish
+
+"vim-dasm : dasm color syntax for vim
+Plug 'pksunkara/vim-dasm'
+"end vim-dasm
 
 "tagbar : browse the tags of the current file and get an overview of its structure
 "Plug 'majutsushi/tagbar'
@@ -93,6 +100,10 @@ let g:indent_guides_guide_size = 1 "size of the guide
 "vim-pasta : smart paste
 Plug 'sickill/vim-pasta'
 "end vim-pasta
+
+"rust-lang : rust stuff
+Plug 'rust-lang/rust.vim'
+"end rust-lang
 
 "color scheme
 Plug 'tomasr/molokai'
@@ -131,5 +142,29 @@ set shell=zsh
 
 let mapleader = ","
 
+let &makeprg = "cd `/home/l3nn0x/.config/nvim/findMakefile.sh` && make"
+
 "remove the search highlight
-nnoremap <silent> <C-l> :nohl<CR><C-l>
+"nnoremap <silent> <C-l> :nohl<CR><C-l>
+
+"add ctrl+e to go to the end of the line in edit mode
+inoremap <silent> <C-e> <C-O>$
+inoremap <silent> <C-a> <C-O>0
+
+"remmap buffer move commands
+noremap <C-h> <C-w>h
+noremap <C-j> <C-w>j
+noremap <C-k> <C-w>k
+noremap <C-l> <C-w>l
+
+"remap <c-f> to find buffers
+noremap <c-f> :buffers<CR>:b
+
+"remap <c-n> and <c-b> to next buffer and prev buffer
+noremap <c-n> :bn<CR>
+noremap <c-b> :bp<CR>
+
+set hidden "can hide a modified buffer without having to save it first
+
+"remap <c-u> to fund and remplace selection
+noremap <c-u> y:%s/<c-r>"//g<left><left>
